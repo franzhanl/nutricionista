@@ -1,0 +1,160 @@
+.header {
+  content: '';
+  display: flex;
+  justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1547044479-59ce6c0a784a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80');
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+}
+
+.picture {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  bottom: -70px;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 3;
+}
+
+.picture img {
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  border: 7px solid white;
+  animation: grow 1s;
+
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: black;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.title {
+  margin-bottom: 10px;
+  overflow: hidden;
+  animation: up 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.sub-title {
+  text-transform: uppercase;
+  margin-top: 0;
+  overflow: hidden;
+  animation: up 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  animation: grow 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  ;
+}
+
+.list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 535px;
+  gap: 20px;
+}
+
+.list a {
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+  padding: 1px 5px;
+  width: 80%;
+  height: 64px;
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  border-radius: 5px;
+
+}
+
+.list a:nth-child(1) {
+  animation: grow 2.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.list a:nth-child(2) {
+  animation: grow 2.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.list a:nth-child(3) {
+  animation: grow 2.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.list a img {
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+/* --------------RESPONSIVITY-------------- */
+@media screen and (max-width: 992px) {
+
+  .container {
+    clip-path: ellipse(100% 55% at 48% 55%);
+    z-index: 2;
+    top: 150px;
+  }
+
+  .picture {
+    bottom: -35px;
+  }
+
+  .title {
+    margin-top: 50px;
+  }
+}
